@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- lo so prof il codice è un orrore super disordinato ma spero che vada bene lo stesso :D -->
+<html lang="it" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Changa+One:ital@0;1&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .boldonse-regular {
+            font-family: "Boldonse", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .dm-serif-display-italic {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .inter-titoli {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .inter-semibold {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #f5f5dc;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <title>Gita Trento</title>
+</head>
+
+<body class="bg-[#f5f5dc]">
+
+    <header class="flex justify-center pt-0 sticky top-0 z-50">
+        <nav class="flex flex-col lg:flex-row items-center justify-between px-4 md:px-6 py-3 md:py-3 rounded-b-3xl bg-[#7C9A7E] w-full gap-3 md:gap-0 shadow-md">
+            <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
+                <img src="caramuel.png" alt="logo" class="w-14 h-14 md:w-20 md:h-20">
+                <span class="boldonse-regular text-white text-sm md:text-lg max-w-[280px] md:max-w-none leading-tight"> CORRIERE DEL CARAMUEL: GITA A TRENTO</span>
+            </div>
+            <ul class="flex flex-wrap justify-center gap-4 md:gap-6 list-none text-sm md:text-base mb-1 md:mb-0">
+                <li><a href="#intro" class="text-white hover:text-[#F5F0E8] inter-titoli transition-colors">INTRO</a></li>
+                <li><a href="#muse" class="text-white hover:text-[#F5F0E8] inter-titoli transition-colors">MUSE</a></li>
+                <li><a href="#centro" class="text-white hover:text-[#F5F0E8] inter-titoli transition-colors">CENTRO</a></li>
+                <li><a href="#conclusioni" class="text-white hover:text-[#F5F0E8] inter-titoli transition-colors">CONCLUSIONI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <div class="px-4 md:px-6 pt-4">
+        <section id="hero"
+            class="relative h-[80vh] md:h-screen flex flex-col items-center justify-center text-center rounded-3xl overflow-hidden px-4">
+            <img src="trento.jpg" alt="herotrento" class="absolute inset-0 w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative z-10 flex flex-col gap-2 md:gap-4">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl text-white boldonse-regular drop-shadow-lg">Gita a Trento 2CI</h1>
+                <p class="text-lg sm:text-xl md:text-xl text-white mt-2 md:mt-4 inter-semibold drop-shadow-md">MUSE e Centro storico - Marzo 2026</p>
+            </div>
+        </section>
+    </div>
+
+    <section id="intro" class="fade-up grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-6 md:px-8 lg:px-24 py-12 md:py-20 items-center">
+        <div class="flex-1">
+            <h2 class="text-3xl md:text-4xl mb-4 inter-titoli">Introduzione</h2>
+            <p class="text-lg leading-relaxed inter text-gray-800">Il 19 marzo 2026 la nostra classe 2CI insieme alla 2BLS è andata in gita a Trento, in particolare al museo MUSE (un museo molto interessante dedicato alla scienza e all'ambiente e al centro città).<br><br>
+Dopo circa 4 ore di viaggio siamo arrivati davanti al museo e abbiamo depositato gli zaini all' entrata.<br><br>
+Inizialmente con il prof Baracca abbiamo avuto l'occasione di fare un giro libero per tutto il museo, in particolare ci siamo soffermati sull'evoluzione di molti animali, della flora e dell' uomo. In generale è stata una guida piena di informazioni utili riguardanti l'evoluzione del nostro pianeta Terra.</p>
+        </div>
+
+        <div class="carousel-wrapper relative w-full overflow-hidden rounded-3xl shadow-xl group">
+             <div class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide w-full p-2" style="scroll-behavior: smooth;">
+                <img src="intro/intro1.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+                <img src="intro/intro2.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+                <img src="intro/intro3.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+                <img src="intro/intro4.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+                <img src="intro/intro5.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+                <img src="intro/intro6.png" class="w-full shrink-0 snap-center object-cover aspect-[4/3] rounded-2xl shadow-md">
+             </div>
+             
+            <button class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-12 h-12 flex items-center justify-center text-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-all hover:scale-110">‹</button>
+            <button class="next-btn absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-12 h-12 flex items-center justify-center text-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-all hover:scale-110">›</button>
+        </div>
+    </section>
+
+    <section id="muse" class="fade-up flex flex-col gap-8 lg:gap-12 px-6 md:px-8 lg:px-24 py-12 md:py-20">
+        <div class="flex-1 w-full lg:w-3/4">
+            <h2 class="text-3xl md:text-4xl mb-4 inter-titoli">Museo MUSE</h2>
+            <p class="text-lg leading-relaxed inter text-gray-800">Il Muse è un grande museo della scienza, ed è stato progettato da Renzo Piano nel 2013.
+L'edificio ha un design moderno ed ha una forma particolare (a piramide) con grandi vetrate. Il luogo è circondato completamente da natura e da palazzi moderni che riprendono lo stile del museo. 
+All' interno il museo è strutturato in 6 piani, che si restringono man mano che si sale. Il museo inizia dal basso ed attraversa i vari ambienti e periodi della vita della terra; sparsi per il museo inoltre sono presenti vari laboratori , serre e aree dedicate ad attività per bambini e di altri ambiti come la stampa 3D.</p>
+        </div>
+
+        <div class="carousel-wrapper flex flex-col md:flex-row items-center gap-6 w-full relative group">
+            <button class="prev-btn hidden md:flex shrink-0 bg-[#7C9A7E] hover:bg-[#68826a] text-white rounded-full w-12 h-12 text-2xl items-center justify-center shadow-lg transition-transform hover:scale-110">‹</button>
+
+            <div class="carousel-container flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 w-full" style="scroll-behavior: smooth;">
+
+                <div class="w-full md:w-1/2 shrink-0 snap-center px-4 flex justify-center">
+                    <div class="carta w-full max-w-[400px] bg-[#FDFAF4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+                        <div class="aspect-square overflow-hidden bg-gray-200">
+                            <img src="evo.png" alt="Evoluzione" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl mb-3 inter-semibold text-gray-900">Evoluzione Umana e animale</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">Nella prima mattinata, a partire dal piano inferiore, il prof ci ha descritto l'evoluzione dell' uomo, facendoci confrontare l'evoluzione dei teschi e delle ossa degli umani nel corso del tempo; questa zona è stata molto suggestiva, poiché erano presenti scheletri di animali enormi, come quelli di una balenottera azzurra (vera) e animali tassidermizzati.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 shrink-0 snap-center px-4 flex justify-center">
+                    <div class="carta w-full max-w-[400px] bg-[#FDFAF4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+                        <div class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center">
+                            <img src="Serra.png" alt="Natura" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl mb-3 inter-semibold text-gray-900">Serra Tropicale</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">Un'altra parte che è stata apprezzata è stata la serra del MUSE. Appena siamo entrati c'era un clima caldo e umido, completamente differente rispetto all' esterno, inoltre era presente una quantità di flora enorme. La serra aveva l'obbiettivo di rappresentare una foresta pluviale. Era presente inoltre uno stagno artificiale con delle anatre e rane, in giro e in mezzo alla flora era possibile vedere alcuni uccelli, in particolare i "Coturnix delegorguei".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 shrink-0 snap-center px-4 flex justify-center">
+                    <div class="carta w-full max-w-[400px] bg-[#FDFAF4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+                        <div class="aspect-square overflow-hidden bg-gray-200">
+                            <img src="fisica.png" alt="Laboratorio" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl mb-3 inter-semibold text-gray-900">Piano dedicato alla fisica</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">Dopo la serra abbiamo visitato il piano dedicato a dei semplici giochi per bambini trasformati in esperimenti fisici. Potevamo provare direttamente alcune attività per capire meglio le leggi della fisica. Ad esempio c'erano giochi con l'equilibrio, la forza, il movimento e le leve, che ci facevano sperimentare in modo semplice come funzionano alcuni principi scientifici.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 shrink-0 snap-center px-4 flex justify-center">
+                    <div class="carta w-full max-w-[400px] bg-[#FDFAF4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+                        <div class="aspect-square overflow-hidden bg-gray-200">
+                            <img src="paesaggio.png" alt="paesaggio" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl mb-3 inter-semibold text-gray-900">Storia del paesaggio</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">Nel primo pomeriggio la guida ha deciso di approfondire l’evoluzione del paesaggio delle Dolomiti nel tempo. Grazie ai fossili osservati nel piano sotterraneo, abbiamo capito che milioni di anni fa al posto delle montagne c’era un ambiente marino, popolato anche da animali oggi estinti.
+
+Proseguendo il percorso, abbiamo visto il primo animale capace di modificare l’ambiente, il castoro, che costruendo dighe crea nuovi ecosistemi. Poi abbiamo ripercorso l’evoluzione dell’uomo: dall’Homo habilis all’Homo erectus, fino all’Homo sapiens moderno.
+
+Infine ci siamo concentrati sulle Dolomiti: un tempo erano considerate luoghi pericolosi, fin quando vennero studiate da Déodat de Dolomieu, da cui prendono il nome. Con il tempo, grazie anche al turismo, sono diventate sempre più frequentate. La guida ci ha mostrato anche alcuni quadri che raccontano l’evoluzione del turismo, dal periodo fascista fino a oggi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="next-btn hidden md:flex shrink-0 bg-[#7C9A7E] hover:bg-[#68826a] text-white rounded-full w-12 h-12 text-2xl items-center justify-center shadow-lg transition-transform hover:scale-110">›</button>
+            
+            <div class="flex md:hidden gap-4 mt-4 justify-center w-full">
+                <button class="prev-btn shrink-0 bg-[#7C9A7E] hover:bg-[#68826a] text-white rounded-full w-12 h-12 text-2xl flex items-center justify-center shadow-lg transition-transform hover:scale-110">‹</button>
+                <button class="next-btn shrink-0 bg-[#7C9A7E] hover:bg-[#68826a] text-white rounded-full w-12 h-12 text-2xl flex items-center justify-center shadow-lg transition-transform hover:scale-110">›</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="centro" class="fade-up grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-6 md:px-8 lg:px-24 py-12 md:py-20 items-center">
+        <div class="order-2 lg:order-1 grid grid-cols-2 gap-3 md:gap-4 h-full mt-6 lg:mt-0">
+            <img src="piazza.png" alt="Trento 1" class="w-full h-40 md:h-48 lg:h-64 object-cover rounded-3xl shadow-lg hover:scale-105 hover:rotate-1 transition-all duration-500">
+            <img src="pizza.png" alt="Trento 2" class="w-full h-40 md:h-48 lg:h-64 object-cover rounded-3xl shadow-lg mt-6 lg:mt-12 hover:scale-105 hover:-rotate-1 transition-all duration-500">
+        </div>
+
+        <div class="order-1 lg:order-2 flex-1">
+            <h2 class="text-3xl md:text-4xl mb-4 inter-titoli">Centro di Trento</h2>
+            <p class="text-lg leading-relaxed inter text-gray-800">Dopo la visita al Museo delle Scienze, siamo andati a piedi verso il centro di Trento. È stato piacevole perché abbiamo attraversato la meravigliosa città di Trento per arrivare fino al Duomo.
+Una volta arrivati in centro, ci siamo fermati per mangiare una pizza da "IBRIS TRENTO" e abbiamo psssato un po’ di tempo insieme nelle vie del capoluogo Trentino. È stato un momento rilassante dopo la visita al museo.
+In fine, prima di partire per Vigevano, abbiamo fatto delle foto insieme davanti alla "Fontana del Nettuno", direttamente nella piazza del Duomo di Trento.</p>
+        </div>
+    </section>
+
+    <section id="conclusioni" class="fade-up grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-6 md:px-8 lg:px-24 py-12 md:py-20 items-center">
+        <div class="flex-1">
+            <h2 class="text-3xl md:text-4xl mb-4 inter-titoli">Conclusioni</h2>
+            <p class="text-lg leading-relaxed inter text-gray-800">In conclusione, questa fantastica gita a Trento è stata un'esperienza molto positiva e interessante perché ha combinato apprendimento e divertimento.
+Personalmente mi è piaciuta perché non è stata una semplice uscita, ci ha lasciato un sacco di informazioni utili riguardo al nostro Pianeta blu, in particolare sulla natura, sui paesaggi e sull'uomo.</p>
+        </div>
+        <div class="relative w-full h-80 rounded-3xl overflow-hidden shadow-xl">
+             <img src="conc.png" alt="Conclusioni" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+    </section>
+
+    <footer class="flex justify-center pb-0">
+        <div class="flex items-center justify-center px-4 md:px-6 py-4 md:py-3 rounded-t-3xl bg-[#7C9A7E] w-full">
+            <p class="text-white inter-semibold text-center text-xs md:text-sm">Leonardo Zappalà — Classe 2CI — Anno Scolastico 2025/2026 - Sito realizzato in HTML, tailwindCSS e JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
