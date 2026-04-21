@@ -3,26 +3,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     carousels.forEach(wrapper => {
         const container = wrapper.querySelector('.carousel-container');
-        const prevBtn = wrapper.querySelector('.prev-btn');
-        const nextBtn = wrapper.querySelector('.next-btn');
+        const prevBtns = wrapper.querySelectorAll('.prev-btn');
+        const nextBtns = wrapper.querySelectorAll('.next-btn');
 
-        if (prevBtn && nextBtn && container) {
-            prevBtn.addEventListener('click', () => {
-                const scrollAmount = container.clientWidth;
-                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        if (container) {
+            prevBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const scrollAmount = container.clientWidth;
+                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
             });
 
-            nextBtn.addEventListener('click', () => {
-                const scrollAmount = container.clientWidth;
-                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            nextBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const scrollAmount = container.clientWidth;
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
             });
         }
     });
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.15
     };
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
